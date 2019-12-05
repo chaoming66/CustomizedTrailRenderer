@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class CustomizedTrailRenderer : MonoBehaviour
 {
+    // Life time for each display point before disappear
     public float lifeTime = 0.13f;
     public Material material;
     public Color color = Color.white;
     public float width = 0.5f;
+    // How far your game object needs to go before generating a new control points
     public float minControlPtnDistance = 0.1f;
     
     private GameObject trail = null;
