@@ -92,17 +92,10 @@ public class CustomizedTrailRenderer : MonoBehaviour
 
         displayCnt = j;
 
-        try
-        {
-            // Free spaces for new display points
-            for (; j > 2; j--)
-                displayPoints[j] = displayPoints[j - 3];
-        }
-        catch (Exception e)
-        {
-            Debug.Log(j);
-        }
-        
+        // Free up spaces for new display points
+        for (; j > 2; j--)
+            displayPoints[j] = displayPoints[j - 3];
+
         // Generating display points in between 4 control points
         displayPoints[2] = new DisplayPoint(CRSpline(0.33f, controlPoints[3], controlPoints[2], controlPoints[1], controlPoints[0]));
         displayPoints[1] = new DisplayPoint(CRSpline(0.66f, controlPoints[3], controlPoints[2], controlPoints[1], controlPoints[0]));
