@@ -24,7 +24,7 @@ public class CustomizedTrailRenderer : MonoBehaviour
     private int displayCnt = 0;
     private int controlCnt = 0;
 
-    void Start()
+    void Awake()
     {
         trail = new GameObject("Trail");
                
@@ -35,9 +35,6 @@ public class CustomizedTrailRenderer : MonoBehaviour
         mesh = meshFilter.mesh;
         trail.AddComponent(typeof(MeshRenderer));
         trail.GetComponent<Renderer>().material = material;
-
-        controlPoints[controlCnt] = transform.position;
-        controlCnt++;
     }
 
     void Update()
@@ -70,6 +67,15 @@ public class CustomizedTrailRenderer : MonoBehaviour
 
         RenderTrail();
 
+    }
+
+    void OnEnable()
+    {
+        // WARNING! The position of the very first control point should be where your gameobject will be at next frame
+        // And it will depend on how you move the gameObject, for now it's set to the position of the gameobject when it starts moving
+        // PLEASE DO Change this section of the code in your game
+        controlPoints[controlCnt] = transform.position;
+        controlCnt++;
     }
 
     void OnDisable()
