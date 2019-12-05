@@ -8,3 +8,9 @@ The life time of each display point as well as width and minimum distance in bet
 
 Below is the video for you to preview how it is like in motion
 [![Trail Renderer in motion](https://img.youtube.com/vi/-f0fGU6tJG8/0.jpg)](https://www.youtube.com/watch?v=-f0fGU6tJG8)
+
+# Version of Unity 
+
+Unity version 2019.2.14f1 when last pushed
+
+
