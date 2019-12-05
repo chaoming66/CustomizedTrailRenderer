@@ -11,6 +11,6 @@ Below is the video for you to preview how it is like in motion
 
 # Version of Unity 
 
-Unity version 2019.2.14f1 when last pushed
+Unity version was 2019.2.14f1 when last pushed
 
 
